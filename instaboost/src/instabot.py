@@ -336,7 +336,7 @@ class InstaBot:
         # Unfollow all bot follow
         if self.follow_counter >= self.unfollow_counter:
             for f in self.bot_follow_list:
-                log_string = "Tentando Unfollow: %s" % (f[0])
+                log_string = "Trying to Unfollow: %s" % (f[0])
                 self.write_log(log_string)
                 self.unfollow_on_cleanup(f[0])
                 sleeptime = random.randint(self.unfollow_break_min,
@@ -358,7 +358,7 @@ class InstaBot:
             if tag.startswith('l:'):
                 tag = tag.replace('l:', '')
                 self.by_location = True
-                log_string = "Buscando pela localização: %s" % (tag)
+                log_string = "Searching for Location: %s" % (tag)
                 self.write_log(log_string,True)
                 if self.login_status == 1:
                     url_location = self.url_location % (tag)
@@ -374,7 +374,7 @@ class InstaBot:
                     return 0
 
             else:
-                log_string = "Buscando pela tag: %s" % (tag)
+                log_string = "Searching for tag: %s" % (tag)
                 self.by_location = False
                 self.write_log(log_string,True)
                 if self.login_status == 1:
@@ -696,7 +696,7 @@ class InstaBot:
                 unfollow = self.s.post(url_unfollow)
                 if unfollow.status_code == 200:
                     self.unfollow_counter += 1
-                    log_string = "Unfollow em: %s #%i." % (user_name,
+                    log_string = "Unfollowing: %s #%i." % (user_name,
                                                           self.unfollow_counter)
                     self.write_log(log_string,True,4)
                 return unfollow
@@ -860,7 +860,7 @@ class InstaBot:
                     and len(self.media_by_tag) > 0 \
                     and self.check_exisiting_comment(nshortcode) == False:
                 comment_text = self.generate_comment()
-                log_string = "Tentando comentar: %s" % (ncodeid)
+                log_string = "Trying to comment: %s" % (ncodeid)
                 self.write_log(log_string)
                 if self.comment(ncodeid, comment_text) != False:
                     self.next_iteration["Comments"] = time.time() + \
