@@ -16,33 +16,24 @@ from src.unfollow_protocol import unfollow_protocol
 
 
 bot = InstaBot(
-    login="YourLogin",
-    password="yourpassword",
-    like_per_day=1700,
-    comments_per_day=200,
+    login="thefrenchie_stitch_",
+    password="",
+    like_per_day=1100,
+    comments_per_day=380,
     tag_list=['like4like', 'l:213336744', 'l:212901056','follow4follow'], #l: for location, check example in readme.md
-    tag_blacklist=['compras', 'promocao'],
-    user_blacklist={},
-    max_like_for_one_tag=39,
-    follow_per_day=0,
-    follow_time=1 * 60,
-    unfollow_per_day=400,
+    tag_blacklist=['frenchbulldog', 'frenchie', 'frenchieoftheday', 'frenchie', 'frenchbull', 'fransebulldog', 'frenchiepuppy', 'dogsofinstagram', 'frenchiesgram', 'frenchbulldogsofinstagram', 'ilovemyfrenchie', 'petsagram', 'puppylove', 'bulldogsofinstagram', 'bulldog', 'frenchielife', 'frenchiesoftheworld', 'frenchiesofinstagram', 'frenchiegram', 'frenchielove', 'thefrenchiepost', 'instafrenchie', 'instadogs', 'frenchies1', 'cutepuppy', 'husky', 'corgi', 'corgination', 'pettravel', 'instadog', 'dogs_of_instagram', 'dogsofinstagram', 'dogoftheday', 'mydog', 'ilovemydog', 'pup', 'Beagle', 'Beagle', 'boxer', 'poodle', 'labradoodle', 'bostonterrier', 'pug', 'puggle', 'pitbull', 'akita', 'bloodhound', 'AustralianShepherd', 'greatdane', 'siberianhusky', 'miniatureschnauzer', 'shihtzu', 'frenchton', 'bostonterrier'],
+    user_blacklist={'twxxyzz':"", 'jacosaur42':"", 'meganhaleynelson':"", 'hlinkhart':""},
+    max_like_for_one_tag=40,
+    follow_per_day=600,
+    follow_time=12 * 60 * 60,
+    unfollow_per_day=660,
     unfollow_break_min=15,
     unfollow_break_max=30,
     log_mod=0,
     proxy='',
     # List of list of words, each of which will be used to generate comment
     # For example: "This shot feels wow!"
-    comment_list=[["this", "the", "your"],
-                  ["photo", "picture", "pic", "shot", "snapshot"],
-                  ["is", "looks", "feels", "is really"],
-                  ["great", "super", "good", "very good", "good", "wow",
-                   "WOW", "cool", "GREAT","magnificent", "magical",
-                   "very cool", "stylish", "beautiful", "so beautiful",
-                   "so stylish", "so professional", "lovely",
-                   "so lovely", "very lovely", "glorious","so glorious",
-                   "very glorious", "adorable", "excellent", "amazing"],
-                  [".", "..", "...", "!", "!!", "!!!"]],
+    comment_list=[['SO MUCH CUTENESS! <3', '😍😍', 'OMG 😍😍', 'Awh 🐾🐾', 'SO CUTE 🐾', '😍😍🐾', '<3 🐾', '🐾 :)', '🐶🐾', 'So cute 🐶', '🐶😍', 'AWH 🐶', 'SOOOO MUCH CUTENESS! 🐶', 'Adorable :)', 'Adorable 🐶', 'Adorable 😍', 'Adorable 🐾', 'Too Cute 🐶😍','<3<3 SO MUCH CUTENESS!', '😍😍😍', '😍 OMG 😍', '🐾 Awh 🐾', '🐾 SOOO CUTE ', '😍🐾😍', '🐾 <3 ', '🐾 :)🐾', '🐾🐶', '🐶 Sooo cute', '🐶😍', 'AWH 🐶', 'SOOOOOOOO MUCH CUTENESS! 😍', '🐶 Adorable 🐶', '😍 Adorable ', '🐾 Adorable🐾', '😍 Too Cute 🐶', '😍 Awh, Too Cute', '🐾Awhhh🐾', 'omg Awhhh', 'Awhhhhhh', 'Awhhhhhh so cute', 'Awhhhhhh too cute', 'omg 🐾 Awhhh', '🐾 Awhhhhhh', '🐾 Awhhhhhh so cute', '🐾 Awhhhhhh too cute', '<3<3 Awhhhhhh too cute', '<3<3 Awhhhhh', '<3<3 too cute', '<3<3 so cute', 'cuteness overload!', 'Awh Pawsome :)', 'OMG... cuteness overload!', 'Awh... cuteness overload!', '🐶 cuteness overload!', '🐾 cuteness overload!', '<3  cuteness overload!', '😍', '😍😍<3<3', 'Way Too Cute!! :)', 'Such a cutie :)', 'Such a cutie <3', 'Such a cutie!' , '😍 Such a cutie!' , '🐾 Such a cutie!' , '🐾 Such a cutie! <3', 'Awhh such a cutie! <3', 'OMG such a cutie! <3', '🐶 Such a cutie! <3', 'The Cutest!', 'The Cutest :)', 'Such a sweetie', 'Such a sweetie :)', 'Such a sweetie <3', 'Such a sweetie!' , '😍 Such a sweetie!' , '🐾 Such a sweetie!' , '🐾 Such a sweetie! <3', 'Awhh such a sweetie! <3', 'OMG such a sweetie! <3', '🐶 Such a sweetie! <3', '😍 Too sweet 🐶', '😍 Awh, Too sweet', 'Awhhhhhh so sweet', 'Awhhhhhh too sweet', '🐾 Awhhhhhh so sweet', '🐾 Awhhhhhh too sweet', '<3<3 Awhhhhhh too sweet', '<3<3 too sweet', '<3<3 so sweet']],
     # Use unwanted_username_list to block usernames containing a string
     ## Will do partial matches; i.e. 'mozart' will block 'legend_mozart'
     ### 'free_followers' will be blocked because it contains 'free'
@@ -55,7 +46,7 @@ bot = InstaBot(
         'beauty', 'express', 'kredit', 'collection', 'impor', 'preloved',
         'follow', 'follower', 'gain', '.id', '_id', 'bags'
     ],
-    unfollow_whitelist=[''],
+    unfollow_whitelist=['alina_savvchenko', 'devintyler_', 'savannahbrito', 'kevn_15', 'faithashlee', 'princessbodhi'],
     UI = False)
 
 
